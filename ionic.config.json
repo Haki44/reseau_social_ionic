@@ -1,7 +1,8 @@
 {
   "name": "reseau_social_ionic",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
