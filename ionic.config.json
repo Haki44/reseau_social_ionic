@@ -1,0 +1,7 @@
+{
+  "name": "reseau_social_ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

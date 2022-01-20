@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "reseau_social_ionic",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
