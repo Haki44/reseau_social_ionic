@@ -5,6 +5,10 @@
 </ion-header>
 
 <ion-content>
+  <div class="logo">
+    <img src="../../../assets/icon/logo.png">
+  </div>
+
   <ion-item>
     <ion-label>Identifiant</ion-label>
     <ion-input type="email"></ion-input>
@@ -14,4 +18,6 @@
     <ion-label>Mot de passe</ion-label>
     <ion-input type="password"></ion-input>
   </ion-item>
+
+  <ion-button [routerLink]="['/feed']" expand="block">Se connecter</ion-button>
 </ion-content>
