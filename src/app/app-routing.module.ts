@@ -32,9 +32,21 @@ const routes: Routes = [
     loadChildren: () => import('./post/post.module').then( m => m.PostPageModule)
   },
   {
+    path: 'post/add-post',
+    loadChildren: () => import('./post/add-post/add-post.module').then( m => m.AddPostPageModule)
+  },
+  {
     path: 'profil',
     loadChildren: () => import('./profil/profil.module').then( m => m.ProfilPageModule)
   },
+  {
+    path: 'notifications',
+    loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
+  },
+  // {
+  //   path: 'profil/modif-password',
+  //   loadChildren: () => import('./profil/modif-password/modif-password.module').then( m => m.ModifPasswordPageModule)
+  // },
 ];
 
 @NgModule({

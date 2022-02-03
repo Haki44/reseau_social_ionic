@@ -1,9 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>add-post</ion-title>
+    <ion-title>Add post</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div class="form_post">
+    <ion-item  class="input">
+      <ion-label position="floating">Description</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item class="input">
+      <!-- <ion-label floating>Photo de publication</ion-label> -->
+      <ion-input class="file" type="file"></ion-input>
+    </ion-item>
+    <ion-button class="button_post"  shape="round" fill="outline">Publier le post</ion-button>
+  </div>
 </ion-content>

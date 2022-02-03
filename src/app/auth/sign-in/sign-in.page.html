@@ -5,5 +5,32 @@
 </ion-header>
 
 <ion-content>
+  <div class="login-link">
+    <a [routerLink]="['/auth/login']"><ion-label>Login</ion-label></a>
+  </div>
 
+  <div class="logo">
+    <img src="../../../assets/icon/logo.png">
+  </div>
+
+  <ion-item>
+    <ion-label>Username</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Confirm Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <ion-button [routerLink]="['/feed']" expand="block">Sign-in</ion-button>
 </ion-content>

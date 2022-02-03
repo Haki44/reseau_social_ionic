@@ -1,0 +1,62 @@
+post {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_post {
+  display: flex;
+  justify-content: center;
+}
+
+.img_post img {
+  width: 100%;
+}
+
+h5 {
+  padding-left: 15px;
+}
+
+.desc {
+  padding: 15px;
+}
+
+p {
+  margin: 0;
+}
+
+.like_com {
+  display: flex;
+  // justify-content: space-around;
+  align-items: center;
+}
+
+.like_com ion-icon {
+  font-size: 25px;
+}
+
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 7px;
+}
+
+.align ion-icon {
+  margin-right: 5px;
+  margin-left: 15px;
+}
+
+.avatar{
+  width: 30px;
+  height: 30px;
+}
+
+.title_card {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}

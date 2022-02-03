@@ -5,5 +5,67 @@
 </ion-header>
 
 <ion-content>
+  <ion-button [routerLink]="['/post/add-post']" expand="block">
+    <p>Add new post</p><ion-icon name="add-outline"></ion-icon>
+  </ion-button>
 
+  <ion-card>
+      <ion-card-subtitle class="title_card">
+        <ion-avatar class="avatar">
+          <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
+        </ion-avatar>
+        <h5>Username</h5>
+      </ion-card-subtitle>
+
+      <ion-card-content>
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      </ion-card-content>
+
+      <div class="img_post">
+        <img src="../../assets/icon/ski.jpg">
+      </div>
+
+      <div class="like_com">
+        <div class="align">
+          <ion-icon name="heart-outline"></ion-icon>
+          153
+        </div>
+
+        <div class="align">
+          <ion-icon name="chatbubble-outline"></ion-icon>
+          200
+        </div>
+      </div>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-subtitle class="title_card">
+      <ion-avatar class="avatar">
+        <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
+      </ion-avatar>
+      <h5>Username</h5>
+    </ion-card-subtitle>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+
+    <div class="img_post">
+      <img src="../../assets/icon/chat1.jpg">
+    </div>
+
+    <div class="like_com">
+      <div class="align">
+        <ion-icon name="heart-outline"></ion-icon>
+        1520
+      </div>
+
+      <div class="align">
+        <ion-icon name="chatbubble-outline"></ion-icon>
+        2536
+      </div>
+    </div>
+  </ion-card>
 </ion-content>

@@ -10,14 +10,19 @@
   </div>
 
   <ion-item>
-    <ion-label>Identifiant</ion-label>
+    <ion-label>Email</ion-label>
     <ion-input type="email"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label>Mot de passe</ion-label>
+    <ion-label>Password</ion-label>
     <ion-input type="password"></ion-input>
   </ion-item>
 
-  <ion-button [routerLink]="['/feed']" expand="block">Se connecter</ion-button>
+  <div class="sign-in-link">
+    <a [routerLink]="['/auth/sign-in']"><ion-label>Sign-in</ion-label></a>
+  </div>
+
+
+  <ion-button [routerLink]="['/feed']" expand="block">Connexion</ion-button>
 </ion-content>

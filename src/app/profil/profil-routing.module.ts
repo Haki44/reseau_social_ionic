@@ -20,10 +20,6 @@ const routes: Routes = [
     path: 'profil/subscribers',
     loadChildren: () => import('./subscribers/subscribers.module').then( m => m.SubscribersPageModule)
   },
-  {
-    path: 'profil/subscriptions',
-    loadChildren: () => import('./subscriptions/subscriptions.module').then( m => m.SubscriptionsPageModule)
-  }
 ];
 
 @NgModule({

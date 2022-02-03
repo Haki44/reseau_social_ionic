@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subscribers.page.scss'],
 })
 export class SubscribersPage implements OnInit {
-
+  type: string;
   constructor() { }
 
   ngOnInit() {
+    this.type = 'abonnes';
+  }
+
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev);
   }
 
 }
