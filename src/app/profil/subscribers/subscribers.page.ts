@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubscribersPage implements OnInit {
   type: string;
+  data: any;
+
   constructor() { }
+
+  ionViewWillEnter() {
+    setTimeout(() => {
+      this.data = {
+        'username': 'Username',
+      };
+    }, );
+  }
 
   ngOnInit() {
     this.type = 'abonnes';

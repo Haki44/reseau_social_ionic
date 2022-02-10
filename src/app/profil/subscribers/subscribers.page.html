@@ -25,13 +25,13 @@
     </ion-segment-button>
   </ion-segment>
 
-<div [ngSwitch]="type">
+  <div [ngSwitch]="type" *ngIf="data">
     <ion-list *ngSwitchCase="'abonnes'">
       <ion-item *ngFor="let item of [].constructor(20); let i = index">
         <ion-avatar class="ion-margin-end">
           <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
         </ion-avatar>
-        <h6>abonné - {{ i }}</h6>
+        <h6>abonné - {{ data.username }} {{ i }}</h6>
       </ion-item>
     </ion-list>
 
@@ -40,7 +40,7 @@
         <ion-avatar class="ion-margin-end">
           <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
         </ion-avatar>
-        <h6>abonnement - {{ i }}</h6>
+        <h6>abonnement - {{ data.username }} {{ i }}</h6>
       </ion-item>
     </ion-list>
   </div>

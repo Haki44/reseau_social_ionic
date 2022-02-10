@@ -4,29 +4,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="data">
   <ion-grid>
     <ion-row>
       <ion-avatar>
-        <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
+        <img src="{{ data.photo }}">
       </ion-avatar>
       <ion-col>
-        <b>6</b>
+        <b>{{ data.nb_publications }}</b>
         <small class="margin0">Publications</small>
       </ion-col>
       <ion-col [routerLink]="['profil/subscribers']">
-        <b>253</b>
+        <b>{{ data.subscribers }}</b>
         <small class="margin0">Abonnés</small>
       </ion-col>
       <ion-col [routerLink]="['profil/subscribers']">
-        <b>185</b>
+        <b>{{ data.subscriptions }}</b>
         <small class="margin0">Abonnements</small>
       </ion-col>
     </ion-row>
   </ion-grid>
 
   <ion-text>
-    <h5>Maxence Bannier</h5>
+    <h5>{{ data.username }}</h5>
   </ion-text>
 
   <ion-button [routerLink]="['profil/edit']" class="modif_button" size="small">Modifier le profil</ion-button>
@@ -40,7 +40,7 @@
         <img src="../../assets/icon/ski.jpg">
       </ion-col>
       <ion-col class="img">
-        <img src="../../assets/icon/chat1.jpg">
+        <img src="{{ data.photo_publication }}">
       </ion-col>
       <!-- <ion-col class="img">
         <img src="../../assets/icon/chat1.jpg">

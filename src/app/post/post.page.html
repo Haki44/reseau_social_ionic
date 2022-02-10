@@ -7,17 +7,16 @@
 <ion-content class="ion-padding">
   <ion-icon class="arrow_icon" [routerLink]="['/profil']" name="arrow-back-outline"></ion-icon>
 
-  <ion-card>
+  <ion-card *ngIf="data">
     <ion-card-subtitle class="title_card">
       <ion-avatar class="avatar">
         <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
       </ion-avatar>
-      <h5>Username</h5>
+      <h5> {{ data.username }} </h5>
     </ion-card-subtitle>
 
     <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      {{ data.description }}
     </ion-card-content>
 
     <div class="img_post">
@@ -27,12 +26,12 @@
     <div class="like_com">
       <div class="align">
         <ion-icon name="heart-outline"></ion-icon>
-        153
+        {{ data.like }}
       </div>
 
       <div class="align">
         <ion-icon name="chatbubble-outline"></ion-icon>
-        200
+        {{ data.com }}
       </div>
     </div>
 
