@@ -25,7 +25,7 @@
 
     <div class="like_com">
       <div class="align">
-        <ion-icon name="heart-outline"></ion-icon>
+        <ion-icon (click)="likeToast()" name="heart-outline"></ion-icon>
         {{ data.like }}
       </div>
 
@@ -39,5 +39,6 @@
       <ion-label position="floating">Laisser un commentaire</ion-label>
       <ion-input></ion-input>
     </ion-item>
+    <ion-button (click)="comToast()" class="com_button" size="small">Commenter</ion-button>
 </ion-card>
 </ion-content>

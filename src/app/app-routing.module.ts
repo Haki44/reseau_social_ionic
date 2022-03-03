@@ -40,6 +40,10 @@ const routes: Routes = [
     loadChildren: () => import('./profil/profil.module').then( m => m.ProfilPageModule)
   },
   {
+    path: 'profil/edit',
+    loadChildren: () => import('./profil/edit/edit.module').then( m => m.EditPageModule)
+  },
+  {
     path: 'notifications',
     loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
   },

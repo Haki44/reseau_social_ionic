@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content *ngIf="data">
-  <ion-grid>
+  <ion-grid  class="ion-padding">
     <ion-row>
       <ion-avatar>
         <img src="{{ data.photo }}">
@@ -25,8 +25,9 @@
     </ion-row>
   </ion-grid>
 
-  <ion-text>
+  <ion-text class="row ion-padding">
     <h5>{{ data.username }}</h5>
+    <ion-button (click)="followToast()" class="follow_button" size="small">Suivre</ion-button>
   </ion-text>
 
   <ion-button [routerLink]="['profil/edit']" class="modif_button" size="small">Modifier le profil</ion-button>
@@ -48,6 +49,7 @@
     </ion-row>
   </ion-grid>
 
-  <ion-button color="danger" [routerLink]="['/auth/login']" expand="block">Deconnexion</ion-button>
+  <!-- <ion-button (click)="deconnexionAlertConfirm()" class="ion-padding" color="danger" [routerLink]="['/auth/login']" expand="block">Deconnexion</ion-button> -->
+  <ion-button (click)="deconnexionAlertConfirm()" class="ion-padding" color="danger" expand="block">Deconnexion</ion-button>
 
 </ion-content>

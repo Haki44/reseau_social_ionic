@@ -27,8 +27,8 @@ ion-text h5 {
 }
 
 .img_profil {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: auto;
 }
 
@@ -42,4 +42,11 @@ ion-text h5 {
 
 .img img{
   transform: scale(1.50);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }

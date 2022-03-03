@@ -27,7 +27,7 @@
 
       <div class="like_com">
         <div class="align">
-          <ion-icon name="heart-outline"></ion-icon>
+          <ion-icon (click)="likeToast()" name="heart-outline"></ion-icon>
           {{ data.like }}
         </div>
 
@@ -56,7 +56,7 @@
 
     <div class="like_com">
       <div class="align">
-        <ion-icon name="heart-outline"></ion-icon>
+        <ion-icon (click)="likeToast()" name="heart-outline"></ion-icon>
         {{ data.like }}
       </div>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-feed',
@@ -8,7 +9,26 @@ import { Component, OnInit } from '@angular/core';
 export class FeedPage implements OnInit {
   data: any;
 
-  constructor() { }
+  constructor(public toastController: ToastController) {}
+
+  async likeToast() {
+    const toast = await this.toastController.create({
+      message: '<ion-icon name="heart"></ion-icon><br>Vous avez liké un post.',
+      duration: 1500,
+      buttons: [{
+          text: 'Done',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    },);
+    await toast.present();
+
+    const { role } = await toast.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
+  }
 
   ionViewWillEnter() {
     setTimeout(() => {
