@@ -9,61 +9,32 @@
     <p>Add new post</p><ion-icon name="add-outline"></ion-icon>
   </ion-button>
 
-  <ion-card *ngIf="data">
+  <ion-card *ngFor="let post of posts">
       <ion-card-subtitle class="title_card">
         <ion-avatar class="avatar">
           <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
         </ion-avatar>
-        <h5>{{ data.username }}</h5>
+        <h5>{{ post.username }}</h5>
       </ion-card-subtitle>
 
       <ion-card-content>
-        {{ data.description }}
+        {{ post.desc }}
       </ion-card-content>
 
       <div class="img_post">
-        <img src="{{ data.img }}">
+        <img src="{{ post.img }}">
       </div>
 
       <div class="like_com">
         <div class="align">
           <ion-icon (click)="likeToast()" name="heart-outline"></ion-icon>
-          {{ data.like }}
+          {{ post.like }}
         </div>
 
         <div class="align">
           <ion-icon name="chatbubble-outline"></ion-icon>
-          {{ data.com }}
+          {{ post.com }}
         </div>
       </div>
-  </ion-card>
-
-  <ion-card *ngIf="data">
-    <ion-card-subtitle class="title_card">
-      <ion-avatar class="avatar">
-        <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
-      </ion-avatar>
-      <h5>{{ data.username }}</h5>
-    </ion-card-subtitle>
-
-    <ion-card-content>
-      {{ data.description }}
-    </ion-card-content>
-
-    <div class="img_post">
-      <img src="{{ data.img }}">
-    </div>
-
-    <div class="like_com">
-      <div class="align">
-        <ion-icon (click)="likeToast()" name="heart-outline"></ion-icon>
-        {{ data.like }}
-      </div>
-
-      <div class="align">
-        <ion-icon name="chatbubble-outline"></ion-icon>
-        {{ data.com }}
-      </div>
-    </div>
   </ion-card>
 </ion-content>

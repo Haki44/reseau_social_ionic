@@ -4,48 +4,62 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomePageModule),
   },
   {
     path: '',
     redirectTo: 'auth/login',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'feed',
-    loadChildren: () => import('./feed/feed.module').then( m => m.FeedPageModule)
+    loadChildren: () =>
+      import('./feed/feed.module').then((m) => m.FeedPageModule),
   },
   {
     path: 'research',
-    loadChildren: () => import('./research/research.module').then( m => m.ResearchPageModule)
+    loadChildren: () =>
+      import('./research/research.module').then((m) => m.ResearchPageModule),
   },
   {
-    path: 'auth/sign-in',
-    loadChildren: () => import('./auth/sign-in/sign-in.module').then( m => m.SignInPageModule)
+    path: 'auth/sign-up',
+    loadChildren: () =>
+      import('./auth/sign-up/sign-up.module').then((m) => m.SignInPageModule),
   },
   {
     path: 'auth/login',
-    loadChildren: () => import('./auth/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () =>
+      import('./auth/login/login.module').then((m) => m.LoginPageModule),
   },
   {
     path: 'post',
-    loadChildren: () => import('./post/post.module').then( m => m.PostPageModule)
+    loadChildren: () =>
+      import('./post/post.module').then((m) => m.PostPageModule),
   },
   {
     path: 'post/add-post',
-    loadChildren: () => import('./post/add-post/add-post.module').then( m => m.AddPostPageModule)
+    loadChildren: () =>
+      import('./post/add-post/add-post.module').then(
+        (m) => m.AddPostPageModule
+      ),
   },
   {
     path: 'profil',
-    loadChildren: () => import('./profil/profil.module').then( m => m.ProfilPageModule)
+    loadChildren: () =>
+      import('./profil/profil.module').then((m) => m.ProfilPageModule),
   },
   {
     path: 'profil/edit',
-    loadChildren: () => import('./profil/edit/edit.module').then( m => m.EditPageModule)
+    loadChildren: () =>
+      import('./profil/edit/edit.module').then((m) => m.EditPageModule),
   },
   {
     path: 'notifications',
-    loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
+    loadChildren: () =>
+      import('./notifications/notifications.module').then(
+        (m) => m.NotificationsPageModule
+      ),
   },
   // {
   //   path: 'profil/modif-password',
@@ -55,8 +69,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

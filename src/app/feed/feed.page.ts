@@ -7,7 +7,7 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./feed.page.scss'],
 })
 export class FeedPage implements OnInit {
-  data: any;
+  posts: any;
 
   constructor(public toastController: ToastController) {}
 
@@ -31,17 +31,23 @@ export class FeedPage implements OnInit {
   }
 
   ionViewWillEnter() {
-    setTimeout(() => {
-      this.data = {
-        'username': 'Username',
-        'description': ' Keep close to Nature\'s heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.',
-        'img': '../../assets/icon/ski.jpg',
-        'com': '256',
-        'like': '362',
-      };
-    }, );
+    this.posts = [
+      {
+        username: 'Username',
+        desc: 'Keep close to Nature\'s heart... and break clear away, once in awhile.',
+        img: '../../assets/icon/ski.jpg',
+        com: '256',
+        like: '362',
+      },
+      {
+        username: 'Oui',
+        desc: 'woods. Wash your spirit clean.',
+        img: '../../assets/icon/ski.jpg',
+        com: '256',
+        like: '362',
+      }
+    ];
   }
-
 
   ngOnInit() {
   }
